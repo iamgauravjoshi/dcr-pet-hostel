@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --font-display: "Fredoka", sans-serif;
+
+  --color-brand-50: #fffcf5;
+  --color-brand-100: #fdf4e1;
+  --color-brand-200: #fbe6b8;
+  --color-brand-300: #f7d083;
+  --color-brand-400: #f3b451;
+  --color-brand-500: #ef982b;
+  --color-brand-600: #da7a1f;
+  --color-brand-700: #b55b1c;
+  --color-brand-800: #90491d;
+  --color-brand-900: #763e1b;
+  --color-brand-950: #431f0c;
+
+  --color-primary-light: #fdf4e1;
+  --color-primary: #ef982b;
+  --color-primary-dark: #da7a1f;
+
+  --color-secondary-light: #e8f3f1;
+  --color-secondary: #2d6a4f;
+  --color-secondary-dark: #1b4332;
+
+  --color-accent-light: #fef2f2;
+  --color-accent: #ef4444;
+
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+  --radius-4xl: 2.5rem;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-delayed: float 6s ease-in-out 3s infinite;
+}
+
+@layer base {
+  body {
+    @apply text-slate-800 bg-brand-50;
+  }
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.glass-card {
+  @apply bg-white/80 backdrop-blur-md border border-white/20;
+}
